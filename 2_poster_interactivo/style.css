@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.pantalla {
+
+  width: 750px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+  
+}
+
+.pantalla .fondo {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.bloque1{
+  position: absolute;
+  top: 46%;
+  left: 20%;
+
+  animation: mover 1s linear infinite ;
+  
+  
+}
+
+.bloque2{
+  position: absolute;
+  top: 33%;
+  left: 60%;
+  animation: regresar 1s linear infinite;
+
+}
+
+.moneda1 {
+  position: absolute;
+  top: 36%;
+  left: 25%;
+  cursor: pointer;
+}
+
+.moneda2 {
+  position: absolute;
+  top: 36%;
+  left: 35%;
+  cursor: pointer;
+}
+
+.corazon {
+  position: absolute;
+  top: 23%;
+  left: 64%;
+  cursor: pointer;
+}
+
+.moneda3 {
+  position: absolute;
+  top: 53%;
+  left: 88%;
+  cursor: pointer;
+}
+.mover{
+  animation: salto 0.1s linear infinite;
+
+}
+.saltar{
+  animation:  0.1s  linear infinite;
+}
+.regresar{
+  animation:  0.3s linear infinite;
+}
+
+@keyframes salto {
+  0%{transform: translateY(0);}
+  30%{transform: translateY(60px);}
+  100%{transform: translateY(0px);}
+
+}
+@keyframes mover {
+   0%{transform: translateY(0);}
+  30%{transform: translateY(60px);}
+  100%{transform: translateY(0px);}
+  
+ 
+}
+@keyframes regresar {
+   0%{transform: translateY(0);}
+  30%{transform: translateY(60px);}
+  100%{transform: translateY(0px); }
+ 
+}
+
+
+/* Contador monedas y corazones */
+
+    .hud {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      font-family: 'Arial', sans-serif;
+      font-size: 18px;
+      color: white;
+      z-index: 1000;
+    }
+
+    .hud-item {
+      display: flex;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+
+    .hud-item img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
