@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pacman Animación Click</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <img id="Fondo" src="img/Fondo.png" alt="">
+    <div class="contenedor">
+        <div class="hud">
+            <div class="hud-item">
+                <img src="./img/Pacman1.png" alt="pacman">
+                <span id="contador-pacman">0</span>
+            </div>
+            <div class="hud-item">
+                <img src="./img/Rojo.png" alt="fantasmita">
+                <span id="contador-fantasmitas">0</span>
+            </div>
+        </div>
+
+        
+        <img src="img/pacman1.png" class="personaje pacman">
+        <img src="img/rojo.png" class="coin rojo">
+        <img src="img/Rosado.png" class="coin rosa">
+        <img src="img/Azul.png" class="coin personaje azul">
+        <img src="img/Amarillo.png" class="coin personaje amarillo">
+
+      
+        <video id="video" width="400">
+            <source src="./img/VideoMusi.mp4" type="video/mp4">
+        </video>
+
+      
+        <div class="buttons">
+            <button id="play-sonido">▶️Play Sound</button>
+            <button id="stop-sonido">⏸️Stop Sound</button>
+            <audio id="audio1">
+                <source src="./img/pacman-son.mp3" type="audio/mp3">
+            </audio>
+        </div>
+    </div>
+
+  
+    <button id="playBtn">Play Video</button>
+
+    <script src="app.js"></script>
+</body>
+</html>

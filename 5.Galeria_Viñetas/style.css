@@ -1,0 +1,158 @@
+*{
+    font-family: Designer;
+}
+body {
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    background-color: black;
+    
+}
+#Fondo{
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    position: fixed;
+
+}
+#playBtn {
+    position: absolute;
+    width: 50%;
+    height: 50px;
+    margin: 10px;
+    font-family: Designer;
+    text-align: center;
+    border-radius: 20px;
+    left: 330px;
+    bottom: 550px;
+    background-color: #ffc505;
+    cursor: pointer;
+    border: none; 
+}
+
+#playBtn:hover {
+    background-color: red;
+}
+
+
+.contenedor {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.personaje {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 175px;
+    cursor: pointer;
+}
+
+.pacman { left: 50px; }
+.rojo {
+     position: fixed;
+     position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    left: 940px; 
+    top: 300px;
+    animation: moverArriba 2s linear forwards;}
+.rosa { 
+    position: fixed;
+     position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 200px;
+    cursor: pointer;
+    left: 940px;
+    animation: moverArriba 2s linear forwards; }
+.azul { left: 350px; }
+.amarillo { left: 450px; }
+
+@keyframes mover {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(1400px); }
+    100% { transform: translateX(1450px); }
+}
+
+@keyframes pacmanBoca {
+    0%   { content: url('img/pacman1.png'); }
+    50%  { content: url('img/Pacman2.png'); }
+    100% { content: url('img/pacman1.png'); }
+}
+
+@keyframes moverArriba {
+    0% { transform: translateY(0,); }
+ 
+    100% { transform: translateY(200px); } 
+}
+
+    .hud {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      font-family: 'Arial', sans-serif;
+      font-size: 18px;
+      color: white;
+      z-index: 1000;
+    }
+
+    .hud-item {
+      display: flex;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+
+    .hud-item img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+    
+    #play-sonido{ position: absolute;
+    background-color: #ffc505;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    top: 10px;
+    right: 1200px;
+    
+}
+
+    #play-sonido:hover {
+    background-color: red;
+}
+    #stop-sonido{ position: absolute;
+    background-color: #ffc505;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    top: 10px;
+    right: 1000px;
+    
+}
+
+    #stop-sonido:hover {
+    background-color: red;
+}
