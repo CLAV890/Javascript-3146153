@@ -1,98 +1,100 @@
 *{
-    font-family: Designer;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: designer;
 }
-body {
-    background-color: rgb(248, 248, 248);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.pantalla{
+    position: relative;
+    width: 750px;
+    height:500px;
     margin: auto;
-    background-color: black;
-    
 }
-#Fondo{
-    align-items: center;
-    position: absolute;
+
+.pantalla .fondo{
     width: 100%;
-    position: fixed;
-
 }
-#playBtn {
+
+.bloque1{
     position: absolute;
-    width: 50%;
-    height: 50px;
-    margin: 10px;
-    font-family: Designer;
-    text-align: center;
-    border-radius: 20px;
-    left: 330px;
-    bottom: 550px;
-    background-color: #ffc505;
-    cursor: pointer;
-    border: none; 
+    top: 50%;
+    left: 20%;
 }
 
-#playBtn:hover {
-    background-color: red;
-}
-
-
-.contenedor {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-}
-
-.personaje {
+.bloque2{
     position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 175px;
+    top: 36%;
+    left: 53%;
+}
+.moneda1{
+    position: absolute;
+    top: 38%;
+    left: 25%;
+    cursor: pointer;
+}
+.moneda2{
+    position: absolute;
+    top: 38%;
+    left: 33%;
     cursor: pointer;
 }
 
-.pacman { left: 50px; }
-.rojo {
-     position: fixed;
-     position: absolute;
-    width: 50px;
-    height: 50px;
+.moneda3{
+    position: absolute;
+    top: 52%;
+    left: 88%;
     cursor: pointer;
-    position: relative;
-    left: 940px; 
-    top: 300px;
-    animation: moverArriba 2s linear forwards;}
-.rosa { 
-    position: fixed;
-     position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 200px;
+}
+
+.corazon{
+    position: absolute;
+    top: 23%;
+    left: 58%;
     cursor: pointer;
-    left: 940px;
-    animation: moverArriba 2s linear forwards; }
-.azul { left: 350px; }
-.amarillo { left: 450px; }
-
-@keyframes mover {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(1400px); }
-    100% { transform: translateX(1450px); }
 }
 
-@keyframes pacmanBoca {
-    0%   { content: url('img/pacman1.png'); }
-    50%  { content: url('img/Pacman2.png'); }
-    100% { content: url('img/pacman1.png'); }
+/* clase para asignar animación */
+.saltar{
+    animation: salto 0.6s ease forwards;
 }
 
-@keyframes moverArriba {
-    0% { transform: translateY(0,); }
- 
-    100% { transform: translateY(200px); } 
+/* animación */
+@keyframes salto{
+    0%{
+        transform: translateY(0); opacity: 1;
+    }
+    30%{
+        transform: translateY(-60px);
+    }
+    100%{
+        transform: translateY(0px); opacity: 0;
+    }
 }
+.bloque1{
+    animation: mover 10s infinite alternate ease-in-out;
+}
+
+@keyframes mover{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100px);
+    }
+}
+.bloque2{
+    animation: movimiento 7s infinite alternate ease-in-out;
+}
+@keyframes movimiento{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100px);
+    }
+}
+
+/* Contador monedas y corazones */
 
     .hud {
       position: absolute;
@@ -121,38 +123,99 @@ body {
       height: 24px;
       margin-right: 8px;
     }
-    
-    #play-sonido{ position: absolute;
-    background-color: #ffc505;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 120px;
-    top: 10px;
-    right: 1200px;
-    
+
+
+    /* ----- Carrusel ----- */
+.carrusel {
+  position: relative;
+  width: 750px;
+  margin: 20px auto;
+  overflow: hidden;
 }
 
-    #play-sonido:hover {
-    background-color: red;
-}
-    #stop-sonido{ position: absolute;
-    background-color: #ffc505;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 120px;
-    top: 10px;
-    right: 1000px;
-    
+.escenas {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-    #stop-sonido:hover {
-    background-color: red;
+.escena {
+  min-width: 100%;
+  display: none;
+}
+
+.escena.activa {
+  display: block;
+}
+
+/* Botones anterior/siguiente */
+.btn {
+  position: absolute;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+.anterior { left: 10px; }
+.siguiente { right: 10px; }
+
+/* Miniaturas */
+.miniaturas {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+.miniaturas img {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 3px solid transparent;
+  border-radius: 5px;
+}
+.miniaturas img:hover {
+  border: 3px solid #FFD700;
+}
+
+.play-stop-img3 {
+  background-color: black;
+  color: aliceblue;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}     
+
+#play-stop-img3:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+#play-stop-img3{
+  background-color: rgb(255, 174, 0);
+  color: black;
+  border: none;
+  position: absolute;
+  top: 4%;
+  left: 23%;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: designer;
 }

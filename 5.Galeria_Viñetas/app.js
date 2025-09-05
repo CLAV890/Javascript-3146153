@@ -1,46 +1,95 @@
+// ----------------- MONEDAS Y CORAZONES -----------------
+const monedas = document.querySelectorAll(".coin");
+const corazones = document.querySelectorAll(".corazon");
+const contadorMonedas = document.querySelector("#contador-monedas");
+const contadorCorazones = document.querySelector("#contador-corazones");
+let totalMonedas = 0;
+let totalCorazones = 0;
 
-const todos = document.querySelectorAll('.personaje');
-const pacman = document.querySelectorAll('.pacman');
-const Contadorpacman = document.querySelector("#contador-pacman");
-const Contadorfantasmitas = document.querySelector("#contador-fantasmitas");
-
-const sounPlay = document.querySelector("#play-sonido");
-const sounStop = document.querySelector("#stop-sonido");
-const audio1 = document.querySelector("#audio1");
-
-let TotalPacman = 0;
-let TotalFantasmitas = 0;
-
-const playBtn = document.querySelector("#playBtn");
-playBtn.addEventListener("click", () => {
-    todos.forEach(personaje => {
-        if (personaje.classList.contains('pacman')) {
-            personaje.style.animation = 'pacmanBoca 0.3s steps(2) infinite, mover 5s linear infinite';
-        } else {
-            personaje.style.animation = 'mover 5s linear infinite';
-        }
-    });
+monedas.forEach(moneda => {
+  moneda.addEventListener("click", () => {
+    moneda.classList.add("saltar");
+    totalMonedas++;
+    contadorMonedas.textContent = totalMonedas;
+  });
 });
 
-todos.forEach(personaje => {
-    personaje.addEventListener("click", () => {
-        personaje.style.display = "none"; 
-
-        if (personaje.classList.contains('pacman')) {
-            TotalPacman++;
-            Contadorpacman.textContent = TotalPacman;
-        } else {
-            TotalFantasmitas++;
-            Contadorfantasmitas.textContent = TotalFantasmitas;
-        }
-    });
+corazones.forEach(corazon => {
+  corazon.addEventListener("click", () => {
+    corazon.classList.add("saltar");
+    totalCorazones++;
+    contadorCorazones.textContent = totalCorazones;
+  });
 });
 
-sounPlay.addEventListener("click", () => {
-    audio1.play();
+// ----------------- ESCENAS -----------------
+const escenas = document.querySelectorAll(".escena");
+const btnanterior = document.querySelector(".anterior");
+const btnsiguiente = document.querySelector(".siguiente");
+const miniaturas = document.querySelectorAll(".miniaturas img");
+
+let indice = 0;
+
+function mostrarEscena(i) {
+  escenas.forEach(e => e.classList.remove("activa"));
+  escenas[i].classList.add("activa");
+  indice = i;
+  reproducirSonidoEscena(i);
+}
+
+btnsiguiente.addEventListener("click", () => {
+  indice++;
+  if (indice >= escenas.length) indice = 0;
+  mostrarEscena(indice);
 });
 
-sounStop.addEventListener("click", () => {
-    audio1.pause();
-    audio1.currentTime = 0;
+btnanterior.addEventListener("click", () => {
+  indice--;
+  if (indice < 0) indice = escenas.length - 1;
+  mostrarEscena(indice);
 });
+
+miniaturas.forEach((miniatura, i) => {
+  miniatura.addEventListener("click", () => {
+    mostrarEscena(i);
+  });
+});
+
+// ----------------- AUDIOS -----------------
+const audios = [
+  document.getElementById("audio-escena1"),
+  document.getElementById("audio-escena2"),
+  document.getElementById("audio-escena3"),
+];
+
+let audioActivo = null;
+let sonidoReproduciendo = false;
+
+function reproducirSonidoEscena(i) {
+  if (audioActivo) {
+    audioActivo.pause();
+    audioActivo.currentTime = 0;
+  }
+
+  if (sonidoReproduciendo) {
+    audioActivo = audios[i];
+    audioActivo.play();
+  }
+}
+
+// ----------------- BOTÓN PLAY / STOP -----------------
+const btnPlaystop = document.getElementById("play-stop-img3");
+btnPlaystop.addEventListener("click", () => {
+  sonidoReproduciendo = !sonidoReproduciendo;
+  btnPlaystop.textContent = sonidoReproduciendo ? "stop" : "play";
+
+  if (sonidoReproduciendo) {
+    reproducirSonidoEscena(indice);
+  } else if (audioActivo) {
+    audioActivo.pause();
+    audioActivo.currentTime = 0;
+  }
+});
+
+// Iniciar en la primera escena
+mostrarEscena(0);
