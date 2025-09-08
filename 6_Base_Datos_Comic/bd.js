@@ -7,35 +7,35 @@ const comic = {
     "personajes" : ["pepa", "lucy","mario"],
     "capitulos": [
         {
-            nombreCap: "Saldo actualizado",
+            nombreCap: "TRIDIM",
+            imPortada: "assets/DRIMITRI.PNG",
+            Video: "Video/cap1.mp4",
+            descripcion: "Lorem imps",
+            personajes: ["pepa","luci","mario"]
+        },
+        {
+            nombreCap: "DIMITRI",
+            imPortada: "assets/TRIDIM.PNG",
+            Video: "Video/cap1.mp4",
+            descripcion: "Lorem imps",
+            personajes: ["pepa","luci","mario"]
+        },
+        {
+            nombreCap: "IGNIS",
+            imPortada: "assets/IGNIS.PNG",
+            Video: "Video/cap1.mp4",
+            descripcion: "Lorem imps",
+            personajes: ["pepa","luci","mario"]
+        },
+        {
+            nombreCap: "NUDOHISTORIA",
             imPortada: "img/portada.jd",
             Video: "Video/cap1.mp4",
             descripcion: "Lorem imps",
             personajes: ["pepa","luci","mario"]
         },
         {
-            nombreCap: "Saldo actualizado",
-            imPortada: "img/portada.jd",
-            Video: "Video/cap1.mp4",
-            descripcion: "Lorem imps",
-            personajes: ["pepa","luci","mario"]
-        },
-        {
-            nombreCap: "Saldo actualizado",
-            imPortada: "img/portada.jd",
-            Video: "Video/cap1.mp4",
-            descripcion: "Lorem imps",
-            personajes: ["pepa","luci","mario"]
-        },
-        {
-            nombreCap: "Saldo actualizado",
-            imPortada: "img/portada.jd",
-            Video: "Video/cap1.mp4",
-            descripcion: "Lorem imps",
-            personajes: ["pepa","luci","mario"]
-        },
-        {
-            nombreCap: "Saldo actualizado",
+            nombreCap: "DESENLACE",
             imPortada: "img/portada.jd",
             Video: "Video/cap1.mp4",
             descripcion: "Lorem imps",
