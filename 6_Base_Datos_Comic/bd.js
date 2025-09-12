@@ -1,42 +1,42 @@
 const comic = {
 
-    "nombreComic" : "Saldo nagativo",
-    "categoria": "apocalipsis",
+    "nombreComic" : "TRIDIM",
+    "categoria": "Viaje1",
     "cantidadCap" : 5,
     "descripcion" : "Trata de una crisis economica",
     "personajes" : ["pepa", "lucy","mario"],
     "capitulos": [
         {
-            nombreCap: "TRIDIM",
-            imPortada: "assets/DRIMITRI.PNG",
+            nombreCap: "CAPITULO 1",
+            imPortada: "assets/capitulo1TRIDIM.JPG",
             Video: "Video/cap1.mp4",
             descripcion: "Lorem imps",
             personajes: ["pepa","luci","mario"]
         },
         {
-            nombreCap: "DIMITRI",
-            imPortada: "assets/TRIDIM.PNG",
+            nombreCap: "CAPITULO 2",
+            imPortada: "assets/capitulo2TRIDIM.PNG",
             Video: "Video/cap1.mp4",
             descripcion: "Lorem imps",
             personajes: ["pepa","luci","mario"]
         },
         {
-            nombreCap: "IGNIS",
-            imPortada: "assets/IGNIS.PNG",
+            nombreCap: "CAPITULO 3",
+            imPortada: "assets/capitulo1TRIDIM.JPG",
             Video: "Video/cap1.mp4",
             descripcion: "Lorem imps",
             personajes: ["pepa","luci","mario"]
         },
         {
-            nombreCap: "NUDOHISTORIA",
-            imPortada: "img/portada.jd",
+            nombreCap: "CAPITULO 4",
+            imPortada: "assets/capitulo2TRIDIM.PNG",
             Video: "Video/cap1.mp4",
             descripcion: "Lorem imps",
             personajes: ["pepa","luci","mario"]
         },
         {
-            nombreCap: "DESENLACE",
-            imPortada: "img/portada.jd",
+            nombreCap: "CAPITULO 5",
+            imPortada: "assets/capitulo1TRIDIM.JPG",
             Video: "Video/cap1.mp4",
             descripcion: "Lorem imps",
             personajes: ["pepa","luci","mario"]
