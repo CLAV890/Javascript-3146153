@@ -11,8 +11,38 @@ body {
     background-image: url(https://cdn.pixabay.com/photo/2019/04/06/06/44/astronaut-4106766_1280.jpg);
 }
 
-.inicio {
-    font-family: designer;
+.Inicio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+
+
+.logo {
+    margin: 15px -20px 5px 10px;
+    width: 150px;
+    left: 20px;
+    position: absolute;
+    top: 13px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+
+.cajaini {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.BtnI {
+      font-family: designer;
     display: inline;
     width: 150px;
     height: 40px;
@@ -21,21 +51,22 @@ body {
     color: #D6D4D4;
     text-align: center;
     background-color: transparent;
-    top: 100px;
+    top: 30px;
     align-items: baseline;
     margin: 5px;
     transition: transform 0.3s ease;
     cursor: pointer;
+    right: -600px;
     position: relative;
-    top: 15px;
-    right: 25px;
 }
 
-.inicio:hover {
-    transform: scale(1.2);
+.BtnI:hover {
 
-
+  transform: scale(1.2);
 }
+
+
+
 
 
 
@@ -192,7 +223,7 @@ header a:hover {
 
 
 .saludo {
-   font-family: designer;
+    font-family: designer;
     display: inline;
     width: 150px;
     height: 40px;
@@ -227,7 +258,8 @@ h1 {
     background-color: #00000056;
     border-radius: 20px;
     width: 55%;
-
+    position: relative;
+    top: 70px;
 
 
 
@@ -239,6 +271,8 @@ h1 {
     margin: 20px;
     background-color: #00000056;
     border-radius: 40px;
+    position: relative;
+    top: 55px;
 
 
     align-items: center;
@@ -274,8 +308,8 @@ h1 {
     width: 900px;
     color: white;
     background-color: #00000027;
-    position: absolute;
-    top: -45px;
+    position: relative;
+    top: 105px;
     left: 180px;
     padding: 13px 0;
     border-radius: 20px;
@@ -386,10 +420,9 @@ h1 {
 }
 
 .container1 {
-    background-color: #0000003d;
-    border: none;
+  
     position: relative;
-    top: 30px;
+    top: 50px;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
