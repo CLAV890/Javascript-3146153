@@ -6,6 +6,7 @@ const imgComic = document.querySelector(".img-comic");
 const listaCaps = document.querySelector(".lista-caps");
 
 
+
 tituloComic.textContent = comic.nombreComic;
 descripcionComic.textContent = comic.categoria;
 imgComic.src = comic.imPortada;

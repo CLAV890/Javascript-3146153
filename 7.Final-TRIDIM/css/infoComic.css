@@ -50,7 +50,7 @@ body {
   display: flex;
   justify-content: flex-end;
   gap: 5px;
-  right: 100px;
+  right: 200px;
   position: relative;
 }
 

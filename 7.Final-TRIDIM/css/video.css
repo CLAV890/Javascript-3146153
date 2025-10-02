@@ -36,22 +36,18 @@ body {
     margin: 15px -20px 5px 10px;
     width: 150px;
     left: 20px;
-    position: absolute;
-    top: 13px;
+    position: relative;
+    top: -10px;
+    right: 800px;
     transition: transform 0.3s ease;
+    right: 200px;
+
 }
 
 .logo:hover {
     transform: scale(1.2);
 }
 
-
-.cajaini {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-}
 
 .BtnI {
 
@@ -114,102 +110,10 @@ body {
 
 .container1 img {
     flex: 1;
-    /* El video o imagen ocupa espacio proporcional */
+   
     max-width: 500px;
-    /* Limita ancho del video/imagen */
+    
     border-radius: 10px;
-    /* Opcional: bordes redondeados */
-}
-
-
-
-.Caja {
-    position: relative;
-    text-align: center;
-    margin-bottom: 30px;
-    background-color: #00000042;
-    border-radius: 20px;
-    width: 92%;
-    height: 450px;
-    z-index: 1;
-    right: -52px;
-    text-align: center;
-    color: #D6D4D4;
-
-}
-
-.img-comic {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-}
-
-.img-comic:hover {
-    transform: scale(1.05);
-}
-
-
-.lista-caps {
-    display: flex;
-    position: relative;
-    gap: 9px;
-    padding: 15px;
-    width: 95%;
-    text-align: center;
-    right: -70px;
-}
-
-.lista-caps li {
-
-    width: 300px;
-    height: 320px;
-    background-color: #00000054;
-    border-radius: 20px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-    right: 50px;
-    position: relative;
-
-}
-
-.lista-caps li:hover {
-    transform: scale(1.05);
-}
-
-.lista-caps li img.imgC {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    border-radius: 20px;
-}
-
-.lista-caps li p {
-    margin-top: 10px;
-    color: #D6D4D4;
-    font-size: 1.2rem;
-
-}
-
-
-.lista-caps::-webkit-scrollbar {
-    height: 8px;
-}
-
-.lista-caps::-webkit-scrollbar-track {
-    background: #000000;
-}
-
-.lista-caps::-webkit-scrollbar-thumb {
-    background: #82368C;
-    border-radius: 4px;
 }
 
 .redes {
@@ -335,6 +239,13 @@ body {
     border-radius: 20px;
 }
 .flech{
-    width: 300%;
-    color: #D6D4D4 ;
+    width: 900%;
+    color: #D6D4D4;
+    
+    
+} 
+#flech{
+    font-size: 50px;
+    position: relative;
+    right: -10px;
 }

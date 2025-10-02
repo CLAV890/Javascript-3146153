@@ -11,7 +11,8 @@ const comic = {
             nombreCap: "CAPITULO 1",
             imPortada: "../Sources/assets/Capitulo1TRIDIM.JPG",
             descripcion: "Trata de una crisis economica",
-            personajes: ["TRIDIM", "DIMITRI", "IGNIS"]
+            personajes: ["INICIO"],
+            btnReproducir: "Reproducir"
 
         },
         {
@@ -19,28 +20,33 @@ const comic = {
             nombreCap: "CAPITULO 2",
             imPortada: "../Sources/assets/Capitulo2TRIDIM.PNG",
             descripcion: "Trata de una crisis economica",
-            personajes: ["pepa", "luci", "mario"]
+            personajes: ["DIMITRI"],
+            btnReproducir: "Reproducir",
+
         },
         {
             id: 3,
             nombreCap: "CAPITULO 3",
             imPortada: "../Sources/assets/Capitulo1TRIDIM.JPG",
             descripcion: "Lorem imps",
-            personajes: ["pepa", "luci", "mario"]
+            personajes: ["TRIDIM"],
+            btnReproducir: "Reproducir",
         },
         {
             id: 4,
             nombreCap: "CAPITULO 4",
             imPortada: "../Sources/assets/Capitulo2TRIDIM.PNG",
             descripcion: "Lorem imps",
-            personajes: ["pepa", "luci", "mario"]
+            personajes: ["IGNIS"],
+            btnReproducir: "Reproducir",
         },
         {
             id: 5,
             nombreCap: "CAPITULO 5",
             imPortada: "../Sources/assets/Capitulo1TRIDIM.JPG",
             descripcion: "Lorem imps",
-            personajes: ["pepa", "luci", "mario"]
+            personajes: ["FINAL"],
+            btnReproducir: "Reproducir",
         }
     ]
 }
